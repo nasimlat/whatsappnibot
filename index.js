@@ -48,10 +48,8 @@ bot.hears(PHONE, async ctx => {
 	const text = ctx.message.text;
 	let tel = text.replace(/\D/g, '');
 
-	if (tel[0] == '8') {
+	if (tel[0] == '8') 
 		tel = tel.replace('8', '7')
-		console.log(tel) }
-	console.log(tel)
 	showLink(ctx, tel)
 });
 
