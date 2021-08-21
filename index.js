@@ -8,7 +8,7 @@ const { BOT_TOKEN, URL } = process.env
 const PORT = process.env.PORT || 5000
 const bot = new Telegraf(BOT_TOKEN)
 
-bot.use(Telegraf.log())
+// bot.use(Telegraf.log())
 
 // Register logger middleware
 bot.use((ctx, next) => {
@@ -22,7 +22,6 @@ bot.use((ctx, next) => {
 bot.command('env', (ctx) => {
 	ctx.reply(`ENV is ${process.env.NODE_ENV}`)
 })
-
 
 const WA_EXAMPLE = '+79371234567'
 const PHONE = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/
